@@ -66,8 +66,8 @@
     <script>
         $(document).ready(function(){
             $('.accordion-item div').hide();
-            $('.accordion-item').each(function(index){
-                $(this).click(function(e){
+            $('.accordion-item').each(function(){
+                $(this).click(function(){
                     $(this).find('.accordion-details').slideToggle("slow");
                     $(this).nextAll().find('.accordion-details').hide('slow');
                     $(this).prevAll().find('.accordion-details').hide('slow');
