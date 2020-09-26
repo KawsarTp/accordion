@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery Practise</title>
     <style>
-        
-        .accordion-item{
-            margin-bottom:5px;
+        .accordion-item {
+            margin-bottom: 5px;
         }
-        .accordion-item a{
+
+        .accordion-item a {
             border: 1px solid aliceblue;
             background: lightseagreen;
             display: block;
@@ -17,57 +18,65 @@
             text-decoration: none;
             color: #ffffff;
         }
-        
-        .accordion-details p{
+
+        .accordion-details p {
             border: 1px solid lightseagreen;
             margin: 0px;
             padding: 30px 10px;
         }
-        a::after{
+
+        a::after {
             content: '';
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 7px solid transparent;
             border-right: 7px solid transparent;
             border-top: 5px solid #ffffff;
             position: absolute;
-            
+            right: 15px;
         }
     </style>
 </head>
+
 <body>
 
     <div class="accordion">
         <div class="accordion-item">
             <a href="javascript:void(0)">Home</a>
             <div class="accordion-details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum ea modi. Sapiente porro incidunt at dolorem, totam doloremque, qui optio corrupti, est suscipit quaerat aliquid architecto itaque animi velit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum ea modi. Sapiente porro incidunt
+                    at dolorem, totam doloremque, qui optio corrupti, est suscipit quaerat aliquid architecto itaque
+                    animi velit.</p>
             </div>
         </div>
 
         <div class="accordion-item">
             <a href="javascript:void(0)">About</a>
             <div class="accordion-details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum ea modi. Sapiente porro incidunt at dolorem, totam doloremque, qui optio corrupti, est suscipit quaerat aliquid architecto itaque animi velit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum ea modi. Sapiente porro incidunt
+                    at dolorem, totam doloremque, qui optio corrupti, est suscipit quaerat aliquid architecto itaque
+                    animi velit.</p>
             </div>
         </div>
 
         <div class="accordion-item">
             <a href="javascript:void(0)">Details</a>
             <div class="accordion-details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum ea modi. Sapiente porro incidunt at dolorem, totam doloremque, qui optio corrupti, est suscipit quaerat aliquid architecto itaque animi velit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsum ea modi. Sapiente porro incidunt
+                    at dolorem, totam doloremque, qui optio corrupti, est suscipit quaerat aliquid architecto itaque
+                    animi velit.</p>
             </div>
         </div>
 
-       
+
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.accordion-item div').hide();
-            $('.accordion-item').each(function(){
-                $(this).click(function(){
+            $('.accordion-item').each(function () {
+                $(this).click(function () {
                     $(this).find('.accordion-details').slideToggle("slow");
                     $(this).nextAll().find('.accordion-details').hide('slow');
                     $(this).prevAll().find('.accordion-details').hide('slow');
@@ -76,4 +85,5 @@
         })
     </script>
 </body>
+
 </html>
